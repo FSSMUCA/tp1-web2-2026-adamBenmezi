@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TP JavaScript</title>
+  </head>
+  <body>
+    <h1>Exercice 4</h1>
+   
+
+    <script>
+   
+   let prenom;
+
+       
+        do {
+            prenom = window.prompt("Quel est votre prénom ?");
+        } while (prenom === null || prenom === "");
+
+        let age;
+        
+        
+        do {
+            age = window.prompt("Quel est votre âge ?");
+            age = Number(age);
+        } while (isNaN(age) || age <= 0); // isNaN est une fonction utilise poure verifier si l utilisateure a entre un nombre pas un nomvalide caractaire 
+
+      
+        let anneeNaissance = 2025 - age;
+
+      
+        window.alert(`Bonjour ${prenom} ! Vous êtes né(e) vers ${anneeNaissance}.`);
+
+        
+        let afficherConsole = window.confirm("Afficher dans la console ?");
+
+        if (afficherConsole) {
+            console.log("Prénom :", prenom);
+            console.log("Âge :", age);
+            console.log("Année de naissance approximative :", anneeNaissance);
+        }
+    </script>
+  </body>
+</html>
